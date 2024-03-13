@@ -323,221 +323,101 @@
 #             print("Bankrupt...")
 #             return False
 #         return True
-#
-#     def live(self, day):
-#         if self.is_alive() == False:
-#             return False
-#         if self.home is None:
-#             print("Settled in the House")
-#             self.get_home()
-#         if self.car is None:
-#             self.get_car()
-#             print(f"I bought a car {self.car.brand}")
-#         if self.job is None:
-#             self.get_job()
-#             print(f"I don't have a job, I'm going to get a job {self.job.job} with salary {self.job.salary}")
-#         self.days_indexes(day)
-#         dice = random.randint(1, 4)
-#         if self.satiety < 20:
-#             print("I'll go eat")
-#             self.eat()
-#         elif self.gladness < 20:
-#             if self.home.mess > 15:
-#                 print("I want to chill, but there is so much mess... \n So i will clean the House")
-#                 self.clean_home()
-#             else:
-#                 print("Let's chill!")
-#                 self.chill()
-#         elif self.money < 0:
-#             print("Start working")
-#             self.work()
-#         elif self.car.strength < 15:
-#             print("I need to repair my car")
-#             self.to_repair()
-#         elif dice == 1:
-#             print("Let's chill!")
-#             self.chill()
-#         elif dice == 2:
-#             print("Start working!")
-#             self.work()
-#         elif dice == 3:
-#             print("Cleaning time!")
-#             self.clean_home()
-#         elif dice == 4:
-#             print("Time for treats!")
-#             self.shopping(manage="delicacies")
-#         return True
-#
-#
-# job_list = {
-#     "Java developer": {"salary": 50, "gladness_less": 10},
-#     "Python developer": {"salary": 40, "gladness_less": 3},
-#     "C++ developer": {"salary": 45, "gladness_less": 25},
-#     "Rust developer": {"salary": 70, "gladness_less": 1},
-# }
-#
-#
-# brands_of_car = {
-#     "BMW": {"fuel": 100, "strength": 100, "consumption": 6},
-#     "Lada": {"fuel": 50, "strength": 40, "consumption": 10},
-#     "Volvo": {"fuel": 70, "strength": 150, "consumption": 8},
-#     "Ferrari": {"fuel": 80, "strength": 120, "consumption": 14},
-# }
-#
-# tudor = Human(name="Tudor")
-#
-# for day in range(1, 8):
-#     print(f"Day {day}")
-#     if not tudor.live(day):
-#         break
 
-# class Human:
-#     height = 170
-# class Student(Human):
-#     pass
-# class Worker(Human):
-#     pass
-#
-# nick = Student()
-# kate = Worker()
-# print(f"Nick height is {nick.height}")
-# print(f"Kate height is {kate.height}")
+# try:
+#     print("start code")
+#     print(error)
+#     print("No errors")
+# except:
+#     print("We have an error")
+# print("code after capsule")
 
-# class Grandparent:
-#     height = 170
-#     satiety = 100
-#     age = 60
-# class Parent(Grandparent):
-#     age = 40
-# class Child(Parent):
-#     height = 50
-#     def __init__(self):
-#         print(self.height)
-#         print(self.satiety)
-#         age = 15
-#         print(age)
-# nick = Child()
 
-# class Hello_World:
-#     hello = "a"
-#     _hello = "b"
-#     __hello = "c"
-#
-#     def __init__(self):
-#         self.world = "1"
-#         self._world = "2"
-#         self.__world = "3"
-#
-#     def printer(self):
-#         print(self.hello)
-#         print(self._hello)
-#         print(self.__hello)
-#         print(self.world)
-#         print(self._world)
-#         print(self.__world)
-#
-# class Hi(Hello_World):
-#     def hi_print(self):
-#         print(self.hello)
-#         print(self.world)
-#         print(self._hello)
-#         print(self._world)
-#         print(self.__hello)
-#         print(self.__world)
-#
-# hello = Hello_World()
-# hello.printer()
-# hi = Hi()
-# hi.hi_print()
+# try:
+#     print("start code")
+#     print(error)
+#     print("No errors")
+# except NameError:
+#     print("We have a NameError")
+# print("code after capsule")
 
-# class Hello:
-#     def __init__(self):
-#         print("Hello!")
-# class Hello_World(Hello):
-#     def __init__(self):
-#         super().__init__()
-#         print("World!")
-# hello_world = Hello_World()
+# try:
+#     print("start code")
+#     print(10/0)
+#     print("No errors")
+# except NameError:
+#     print("We have a NameError")
+# except ZeroDivisionError:
+#     print("We have a ZeroDivisionError")
+# print("code after capsule")
 
-# class Class1():
-#     var = 20
-#
-#     def __init__(self):
-#         self.var = 10
-#
-# class Class2(Class1):
-#     def __init__(self):
-#         print(self.var)
-#         super().__init__()
-#         print(self.var)
-#         print(super().var)
-#
-# hello_world = Class2()
 
-# class Grandparent:
-#     def about(self):
-#         print("I am Grandpa")
-#     def about_myself(self):
-#         print("I am Grandpa")
-# class Parent(Grandparent):
-#     def about_myself(self):
-#         print("i am parent")
-# class Child(Parent):
-#     def __init__(self):
-#         super().about()
-#         super().about_myself()
-#
-# nick = Child()
+# try:
+#     print("start code")
+#     print(10/0)
+#     print("No errors")
+# except (NameError, ZeroDivisionError):
+#     print("We have an error")
 
-# class Computer:
-#     def calculate(self):
-#         print("Calculating...")
-#
-# class Display:
-#     def display(self):
-#         print("I display the image on the screen")
-#
-# class SmartPhone(Display, Computer):
-#     pass
-#
-# iphone = SmartPhone()
-# iphone.calculate()
-# iphone.display()
 
-# class Computer:
-#     def __init__(self):
-#         super().__init__()
-#         self.memory = 128
-#
-# class Display:
-#     def __init__(self):
-#         super().__init__()
-#         self.resolution = "4k"
-#
-# class SmartPhone(Display, Computer):
-#     def print_info(self):
-#         print(self.resolution)
-#         print(self.memory)
-#
-# iphone = SmartPhone()
-# iphone.print_info()
+# try:
+#     print("start code")
+#     print(10/0)
+#     print("No errors")
+# except (NameError, ZeroDivisionError) as error:
+#     print(error)
+# print("code after capsule")
 
-# class Computer:
-#     def __init__(self, model, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.model  =  model
-#         self.memory = 128
+# try:
+#     try:
+#         print("start code")
+#         print(error)
+#         print("No errors")
+#     except SyntaxError:
+#         print("Wrong Syntax")
+# except NameError as error:
+#     print(error)
+
+# try:
+#     print("Hello")
+# except:
+#     print("We have a problem")
+# else:
+#     print("No problem")
+
+# try:
+#     print("start code")
+#     print(error)
+#     print("No error")
+# except NameError as error:
+#     print(error)
+# else:
+#     print("I am ELSE")
+# finally:
+#     print("Finally code")
+
+# def checker(var_1):
+#     if type(var_1) != str:
+#         raise TypeError(f"Sorry, we can't work with {type(var_1)}, " f"we need class str")
+#     else:
+#         return var_1
 #
-# class Display:
-#     def  __init__(self, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.resolution = "4K"
+# first_var = "Hello"
+# # first_var = 10
+# checker(first_var)
+
+# class BuildingError(Exception):
+#     def __str__(self):
+#         return f"With so much material the house cannot be built"
 #
-# class SmartPhone(Display, Computer):
-#     def print_info(self):
-#         print(self.model)
-#         print(self.resolution)
-#         print(self.memory)
+# def check_material(amount_of_material, limit_value):
+#     if amount_of_material > limit_value:
+#         return "enough material"
+#     else:
+#         raise BuildingError(amount_of_material)
 #
-# iphone = SmartPhone(model = "Last")
-# iphone.print_info()
+# materials = 123
+# check_material(materials, 300)
+
+# import warnings
+# warnings.warn("warning no code here", SyntaxWarning)
